@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #fff;
+}
+.banner {
+    position: absolute; /* 1. Absolute */
+    width: 100%;
+    height: 100vh;
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    z-index: 1; /* z-index */
+}
+
+.navbar {
+    position: sticky; /* 2. Sticky */
+    top: 0;
+    width: 95%;
+    margin: auto;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2; /* z-index */
+}
+
+.logo {
+    margin-top: 20px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.navbar ul li { /* 3. Relative */
+    list-style: none;
+    display: inline-block;
+    justify-content: left;
+    margin-right: 50px;
+    position: relative;
+    top: 0px;
+    left: 10px;
+    font-size: large;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #ffffff;
+    position: absolute; /* 1. Absolute */
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    position: static; /* 4. Static */
+    color: #fff;
+    text-align: center;
+    padding: 90px;
+    margin-top: 90px;
+}
+
+.content h1 {
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+button {
+    position: relative; /* 3. Relative */
+    top: 10px;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    z-index: 2; /* z-index */
+}
+
+.content footer{
+    position: fixed; /* 5. Fixed */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
